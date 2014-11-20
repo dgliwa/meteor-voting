@@ -1,0 +1,20 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "c3": {}
+    },
+    "packages": {
+      "c3": {
+        "git": "https://github.com/TackMobile/meteor-c3.js.git",
+        "tag": "v0.0.6",
+        "commit": "e12872cf0ecbaf53fc699e07634b946ab8bce6f2"
+      },
+      "d3": {
+        "git": "https://github.com/sergeyt/meteor-d3.git",
+        "tag": "v3.4.1",
+        "commit": "bdfee250a332b516a158ed0913ec9363850afe0d"
+      }
+    }
+  }
+}

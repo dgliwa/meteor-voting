@@ -8,4 +8,5 @@ standard-app-packages
 mizzao:bootstrap-3
 underscore
 iron:router
+c3
 

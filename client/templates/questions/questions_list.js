@@ -15,5 +15,6 @@ Template.questionsList.events({
       var vote = votes[i].value;
       Meteor.call("vote", id, vote);
             }
+    Router.go('resultsList');
   }
 });

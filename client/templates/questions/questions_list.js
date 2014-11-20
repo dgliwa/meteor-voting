@@ -1,5 +1,5 @@
 Template.questionsList.helpers({
-  posts: function() {
-    return Posts.find();
+  questions: function() {
+    return Questions.find();
   }
 });

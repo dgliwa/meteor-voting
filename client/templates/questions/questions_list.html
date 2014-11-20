@@ -1,7 +1,9 @@
 <template name="questionsList">
-  <div class="posts">
-    {{#each posts}}
+  <div class="questions">
+    <form class="main form">
+    {{#each questions}}
       {{> questionItem}}
     {{/each}}
+    </form>
   </div>
 </template>

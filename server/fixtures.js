@@ -1,21 +1,19 @@
-if (Posts.find().count() === 0) {
-  Posts.insert({
+if (Questions.find().count() === 0) {
+  Questions.insert({
     question: 'Introducing Telescope',
-    options: ['http://sachagreif.com/introducing-telescope/',
-          'http://sachagreif.com/introducing-telescope/']
+    options: [{option: 'http://sachagreif.com/introducing-telescope/', votes: 0},
+    {option: 'http://sachagreif.com/introducing-telescope/', votes: 0}]
 
   });
 
-  Posts.insert({
+  Questions.insert({
     question: 'Meteor',
-    options: ['http://meteor.com', 'http://meteor.com']
+    options: [{option:'http://meteor.com',votes:0}, {option:'http://meteor.com',votes:0}]
 
   });
 
-  Posts.insert({
+  Questions.insert({
    question: 'The Meteor Book',
-    options: ['http://themeteorbook.com',
-    'http://themeteorbook.com',
-    'http://themeteorbook.com']
+    options: [{option:'http://themeteorbook.com',votes:0},{option:'http://themeteorbook.com',votes:0}]
   });
 }

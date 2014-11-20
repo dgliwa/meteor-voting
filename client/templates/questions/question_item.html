@@ -1,10 +1,12 @@
 <template name="questionItem">
-  <div class="post">
-    <div class="post-content">
+  <div class="question">
+    <div class="question-content">
+      {{#with this}}
       <h3>{{question}}</h3>
       {{#each options}}
-        {{option}}<br>
+      <input type="radio" name="{{question}}" val="{{option}}"/>{{option}}<br>
       {{/each}}
+      {{/with}}
     </div>
   </div>
 </template>

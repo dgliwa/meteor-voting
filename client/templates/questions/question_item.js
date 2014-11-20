@@ -1,13 +1,15 @@
 Template.questionItem.helpers({
   options: function(){
              console.log(this)
-            var question1 = this.question;
-            console.log("question " + question1);
-            return _.map(this.options, function(option){return {option: option, question: question1}; });
+            var id = this._id;
+            return _.map(this.options, function(option){return {option: option, question: id}; });
            },
   option: function() {
     return this.option.option;
   },
+  votes: function(){
+    return this.option.votes;
+         },
   question: function(){
           return this.question;
             }

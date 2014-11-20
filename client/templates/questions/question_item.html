@@ -4,7 +4,7 @@
       {{#with this}}
       <h3>{{question}}</h3>
       {{#each options}}
-      <input type="radio" name="{{question}}" val="{{option}}"/>{{option}}<br>
+      <input type="radio" name="{{question}}" value="{{option}}"/>{{option}} {{votes}}<br>
       {{/each}}
       {{/with}}
     </div>

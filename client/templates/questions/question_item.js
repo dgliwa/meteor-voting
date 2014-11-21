@@ -1,6 +1,5 @@
 Template.questionItem.helpers({
   options: function(){
-             console.log(this)
             var id = this._id;
             return _.map(this.options, function(option){return {option: option, question: id}; });
            },

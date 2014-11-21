@@ -1,20 +1,8 @@
 <template name="resultsGraph">
-<div>
-  <div id="chart"></div>
-  <script>
-    var chart = c3.generate({
-      data: {
-        columns: [
-        ['data1', 1030, 1200, 1100, 1400, 1150, 1250],
-        ['data2', 2130, 2100, 2140, 2200, 2150, 1850]
-        ],
-        type: 'bar',
-      },
-      bar: {
-        zerobased: false
-      }
-    });
-  </script>
-</div>
+{{#with this}}
+{{question}}
+  <div id="{{id}}"></div>
+{{graph}}
+{{/with}}
 </template>
 

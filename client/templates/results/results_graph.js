@@ -19,14 +19,14 @@ Template.resultsGraph.helpers({
 Template.resultsGraph.rendered = function () {
   function get_votes_for_question(question){
     console.log("question: " + question)
-    console.log(_.map(question.data.options, function(option_pair){return [option_pair.option, option_pair.votes];}))
-    return _.map(question.data.options, function(option_pair){return [option_pair.option, option_pair.votes];});
+    return _.map(question.options, function(option_pair){return [option_pair.option, option_pair.votes];});
   }
-  var id = this.data.question;
-  var votes_object = this;
   console.log(this);
+  var question = this.data.question;
+  var id = this.data._id;
+  var votes_object = this.data;
   var graph = c3.generate({
-    bindto: "#" + replace_chars_with_dash(id),
+    bindto: "#" + replace_chars_with_dash(question),
     data: {
         columns: get_votes_for_question(votes_object)/*[
             ['data1', 30, 200],
@@ -43,4 +43,12 @@ Template.resultsGraph.rendered = function () {
         }
     }
   });
+
+  Deps.autorun(function () {
+        var result = Questions.findOne({_id : id });
+        console.log(result);
+        graph.load({
+          columns: get_votes_for_question(result)
+        });
+      });
 }

@@ -1,12 +1,39 @@
+
+
+
 <template name="layout">
-<div class="container">
-  <header class="navbar navbar-default" role="navigation">
-  <div class="navbar-header">
-    <a class="navbar-brand" href="/">Microscope</a>
-  </div>
-  </header>
-  <div id="main" class="row-fluid">
-    {{> yield}}
-  </div>
-</div>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">METEOR VOTING</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <!-- <li><a href="about.html">About</a></li> -->
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+	<!-- +++++ Welcome Section +++++ -->
+	<div id="ww">
+	    <div class="container">
+			<div class="row">
+				<div class="col-lg-8 col-lg-offset-2 centered">
+				    {{> yield}}
+				</div>
+				<!-- <div class="col-lg-2 centered">
+					<a class="twitter-timeline" href="https://twitter.com/swaggPockets" data-widget-id="531610678256074752">Tweets by @swaggPockets</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+				</div> -->
+				<!-- /col-lg-8 -->
+			</div><!-- /row -->
+	    </div> <!-- /container -->
+	</div><!-- /ww -->
 </template>

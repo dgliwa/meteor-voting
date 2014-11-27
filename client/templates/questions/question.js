@@ -1,4 +1,4 @@
-Template.questionItem.helpers({
+Template.question.helpers({
   options: function(){
             var id = this._id;
             return _.map(this.options, function(option){return {option: option, question: id}; });
@@ -9,7 +9,8 @@ Template.questionItem.helpers({
   votes: function(){
     return this.option.votes;
          },
-  question: function(){
+  question_name: function(){
           return this.question;
             }
 });
+

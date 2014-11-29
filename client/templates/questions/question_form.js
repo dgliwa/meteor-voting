@@ -6,9 +6,6 @@ Template.questionForm.helpers({
   option: function() {
     return this.option.option;
   },
-  votes: function(){
-    return this.option.votes;
-         },
   question: function(){
           return this.question;
             }

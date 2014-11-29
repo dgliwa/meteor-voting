@@ -4,5 +4,8 @@ Meteor.methods({
     },
   deleteQuestion: function(id) {
     Questions.remove({_id: id});
+  },
+  addOption: function(id, text){
+    Questions.update({_id: id}, { $push : { 'options' : {'option' : text, 'votes': 0}}})
   }
 });

@@ -22,10 +22,6 @@ Template.resultsGraph.rendered = function () {
   var id = this.data._id;
   var votes_object = this.data;
   var graph = c3.generate({
-    size: {
-        height: 240,
-        width: 480
-    },
     color: { pattern: ['#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a' ] },
     bindto: "#" + replace_chars_with_dash(question),
     data: {
